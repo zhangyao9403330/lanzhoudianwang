@@ -1,0 +1,55 @@
+{
+    "menu": [
+    { "name":"线路概况" ,
+      "url":"gline.html",
+      "id":"char0"
+    },
+    { "name":"故障统计" ,
+      "url":"gztj.html",
+      "id":"char1"
+    },
+    { "name":"无人机巡检" ,
+      "url":"wurenji.html",
+      "id":"char2"
+    },
+    { "name":"移动巡检派工" ,
+      "url":"mobilex.html",
+      "id":"char3"
+    },
+    { "name":"五跨设备概况" ,
+      "url":"fivespan.html",
+      "id":"char4"
+    },
+    { "name":"六防设备概况" ,
+      "url":"sixprevention.html",
+      "id":"char5"
+    },
+    { "name":"覆核检测" ,
+      "url":"",
+      "id":"char6"
+    },
+    { "name":"在线监测" ,
+      "url":"",
+      "id":"char7"
+    },
+    { "name":"防外破管控" ,
+      "url":"fwpgl.html",
+      "id":"char8"
+    },
+    { "name":"可视化管控" ,
+      "url":"kshjk.html",
+      "id":"char9"
+    },
+    { "name":"预警中心" ,
+      "url":"",
+      "id":"char10"
+    },
+    { "name":"机器人巡检" ,
+      "url":"",
+      "id":"char11"
+    }
+   
+    ]
+
+
+}

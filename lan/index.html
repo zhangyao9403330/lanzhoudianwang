@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="keywords" content="HTML5交通运输监控大数据可视化智慧云平台网站模板" />
+    <meta name="description"
+        content="HTML5交通运输监控大数据可视化智慧云平台网站模板下载。北京市智慧城市交通监控大数据可视化云平台管理系统模板，车辆监控服务后台系统模板html下载。该系统主要包括地图监控、统计分析、表格管理、视频监控、文本录入等界面。主要用于大数据系统的后台展示。大气好看，总共10个html页面模板。" />
+    <!-- <meta name="author" content="js代码(www.jsdaima.com)" />
+    <meta name="copyright" content="js代码(www.jsdaima.com)" /> -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" type="text/css" href="./Cesium/Widgets/widgets.css" />
+    <link rel="stylesheet" type="text/css" href="./CesiumSDK/CesiumSDK.css" />
+    <style>
+        th {
+            color: #90D1F2;
+
+        }
+
+        td {
+            text-align: center;
+            color: #90D1F2;
+        }
+
+
+        #box {
+            width: 100%;
+            height: 100%;
+        }
+
+        #maskbox {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 9999;
+            left: 0px;
+            top: 0px;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+
+        }
+
+        .video_center_box {
+            width: 1596px;
+            height: 860px;
+            /* border:1px solid red; */
+            position: absolute;
+
+            text-align: center;
+
+            left: 50%;
+            top: 56%;
+            transform: translate(-50%, -50%);
+        }
+
+        .div_any01 {
+            margin-top: 87px;
+            position: relative;
+        }
+
+        #div_any03 {
+            margin-top: 34px;
+            position: relative;
+        }
+        .line_box{
+            position: absolute
+        }
+        .line_box .p_chart ul {
+            width: 100%;
+            height: 28px;
+            font-size: 18px;
+            font-family: SourceHanSansCN-ExtraLight;
+            font-weight: bold;
+            overflow: hidden;
+            color: rgba(144, 209, 242, 1);
+        }
+
+        .line_box .p_chart ul li {
+            float: left;
+            width: 25%;
+            height: 28px;
+            text-align: center;
+            line-height: 28px
+        }
+
+        .line_box .p_chart .nav {
+            background: #7ECEF4;
+            overflow: hidden;
+            border-radius: 16px;
+            margin-top: 10px;
+            color: #110739
+        }
+
+        .right_top_Stitle .right_span {
+            float: right;
+            color: #90D1F2;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav id="bt-menu" class="bt-menu">
+        <a href="#" class="bt-menu-trigger"><span></span></a>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">任务管理</a></li>
+            <li><a href="#">缺陷管理</a></li>
+            <li><a href="#">隐患管理</a></li>
+            <li><a href="#">重点工作</a></li>
+            <li><a href="#">设备管理</a></li>
+            <li><a href="#">检修管理</a></li>
+        </ul>
+
+    </nav> -->
+
+    <!--内容部分-->
+    <div class="con">
+
+        <div class="div_any">
+            <div class=" div_any01" id="div_any01">
+
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart" style="overflow-x: scroll;height:225px;">
+                    </div>
+                </div>
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart"></div>
+                </div>
+
+
+
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart"></div>
+                </div>
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart"></div>
+                </div>
+
+
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart"></div>
+                </div>
+                <div class="line_box">
+                    <h2></h2>
+                    <div class="p_chart"></div>
+                </div>
+
+            </div>
+
+            <div class="div_any02">
+                <div class="anyone_title">
+                </div>
+
+                <div class="anyone_mapbox">
+                    <iframe id="childframe" src="globe.html" frameborder="0" style="
+                  position:absolute;
+                    width: 1550px;
+                    height: 720px;
+                    left:20px;
+                    top:60px;
+                
+                    "></iframe>
+
+                </div>
+
+
+            </div>
+
+            <div class="div_any03" >
+                <div class="right_top_Stitle">
+                    <p class="right_span">
+                        <span id="riqi" style="margin-right:16px;">2019年12月25日</span>
+                        <span style="margin-right:16px;">安全生产3645天</span>
+                    </p>
+                </div>
+                <div id="div_any03">
+                    <div class="line_box">
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+                    <div class="line_box">
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+
+
+                    <div class="line_box" >
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+                    <div class="line_box">
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+
+
+                    <div class="line_box" >
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+                    <div class="line_box">
+                        <h2></h2>
+                        <div class="p_chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="maskbox">
+            <div class="video_center_box">
+                <video src="img/jk.mp4" width="1596" height="860" autoplay="autoplay"></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery/jQuery-2.2.0.min.js"></script>
+    <script src="js/comurl.js"></script>
+    <script src="js/echarts-all.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        divleft("#div_any01")
+        divleft("#div_any03")
+
+        function divleft(Name) {
+            var aLi = $(Name).children();
+            // console.log(aLi)
+            for (var i = 0; i < aLi.length; i++) {
+
+                //布局
+                aLi[i].style.left = (i % 2) * 554 + 'px';
+                aLi[i].style.top = Math.floor(i / 2) * 268 + 'px';
+
+                //记录顺序
+                aLi[i].index = i;
+
+                //拖拽
+                aLi[i].onmousedown = function (ev) {
+                    var e = ev || window.event;
+                    var iX = e.clientX - this.offsetLeft;
+                    var iY = e.clientY - this.offsetTop;
+                    // console.log(e.clientX)
+                    // console.log(this.offsetLeft)
+                    //针对低版本ie,建立透明层
+                    if (this.setCapture) {
+                        this.setCapture();
+                    }
+
+                    //添加样式
+                    this.className = 'line_box';
+                    var that = this;
+
+                    document.onmousemove = function (ev) {
+                        var e = ev || window.event;
+
+                        var iL = e.clientX - iX;
+                        var iT = e.clientY - iY;
+
+                        that.style.left = iL + 'px';
+                        that.style.top = iT + 'px';
+
+
+
+                    };
+                    document.onmouseup = function () {
+                        document.onmousemove = null;
+                        document.onmouseup = null;
+
+                        //针对低版本ie,建立透明层
+                        if (this.releaseCapture) {
+                            this.releaseCapture();
+                        }
+                        //判断是否交换位置
+                        for (var j = 0; j < aLi.length; j++) {
+                            if (
+                                aLi[j] != that //排除自己
+                                &&
+                                that.offsetLeft + that.offsetWidth > aLi[j].offsetLeft + aLi[j].offsetWidth /
+                                2 &&
+                                that.offsetTop + that.offsetHeight > aLi[j].offsetTop + aLi[j].offsetHeight /
+                                2 &&
+                                that.offsetLeft < aLi[j].offsetLeft + aLi[j].offsetWidth / 2 &&
+                                that.offsetTop < aLi[j].offsetTop + aLi[j].offsetHeight / 2
+                            ) {
+                                //交换顺序
+                                var temp = aLi[j].index;
+                                aLi[j].index = that.index;
+                                that.index = temp;
+
+                                //交换位置
+                                aLi[j].style.left = (aLi[j].index % 2) * 554 + 'px';
+                                aLi[j].style.top = Math.floor(aLi[j].index / 2) * 268 + 'px';
+                                break;
+
+                            }
+                        }
+
+                        //去掉样式
+                        that.className = 'line_box';
+
+                        //还原位置
+                        that.style.left = (that.index % 2) * 554 + 'px';
+                        that.style.top = Math.floor(that.index / 2) * 268 + 'px';
+
+                    };
+                    //阻止浏览器的默认行为
+                    return false;
+                }
+            }
+        }
+
+
+
+
+        var indexPath = "rest/eqLine/mainMenu";
+        $.ajax({
+            url: "menu.json",
+            type: "get",
+            async: false,
+            success: function (e) {
+                initMenu(e);
+            }
+        })
+
+
+        function initMenu(e) {
+            var arr = e.menu;
+            var url = $(".line_box");
+            var tie = $(".line_box").children("h2");
+            var con = $(".line_box").children("div");
+            for (var i = 0; i < arr.length; i++) {
+                tie[i].innerHTML = arr[i].name;
+                con[i].setAttribute("id", arr[i].id);
+                (function (i) {
+                    url[i].onclick = function () {
+                        window.location.href = arr[i].url;
+                    }
+                })(i)
+
+                con[i].onclick = function (e) {
+                    event.stopPropagation();
+                }
+
+                if (con[i].getAttribute("id") == "char0") {
+
+                    $.ajax({
+                        url: this.baseUrl + this.indexPath,
+                        type: "get",
+                        success: function (res) {
+                            console.log(con)
+                            console.log(res);
+                            con[0].innerHTML =
+                                "<ul class='nav1'>" +
+                                "<li>" + "电压等级" + "</li>" +
+                                "<li>" + "线路数量" + "</li>" +
+                                "<li>" + "线路总长度" + "</li>" +
+                                "<li>" + "标塔数量" + "</li>" +
+                                "</ul>"
+                            var str = "";
+                            for (var i = 0; i < res.length; i++) {
+                                str +=
+                                    "<ul class='nav'>" +
+                                    "<li>" + res[i].VOLTAGE_LEVEL + "</li>" +
+                                    "<li>" + res[i].LINECOUNT + "</li>" +
+                                    "<li>" + res[i].LINESUM + "</li>" +
+                                    "<li>" + res[i].GTNUM + "</li>" +
+                                    "</ul>"
+
+                            }
+                            con[0].innerHTML = con[0].innerHTML + str;
+                        }
+                    })
+
+                }
+            }
+
+        }
+
+        $(".line_box h2").hover(function () {
+            $(this).css({
+                "cursor": "pointer",
+                "color": "firebrick"
+            });
+        }, function () {
+            $(this).css({
+                "cursor": "none",
+                "color": "#7ECEF4"
+            });
+        });
+
+        // function btnClick() {
+        //         document.getElementById("childframe").contentWindow.indexclick();
+        //     }
+    </script>
+
+
+</body>
+
+</html>
